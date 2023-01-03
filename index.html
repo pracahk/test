@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+</html>
+<head>
+<meta charset="utf-8" lang="pl">
+<link rel="stylesheet" type="text/css" href="styl.css">
+<script>
+/*const faktury = []*/
+function save(){
+/*	faktury.push("nowa faktura");
+	console.log(faktury);*/
+	var name = document.getElementById("kontr").value;
+	document.getElementById("nazwa1").innerHTML = name;
+	var nr = document.getElementById("numer").value;
+	document.getElementById("nazwa2").innerHTML = nr;
+	var kw = document.getElementById("kwota").value;
+	document.getElementById("nazwa3").innerHTML =+ kw + " zł";
+	var dt1 = document.getElementById("data1").value;
+	document.getElementById("nazwa4").innerHTML = dt1;
+	var dt2 = document.getElementById("data2").value;
+	document.getElementById("nazwa5").innerHTML = dt2;
+	var op = document.getElementById("opis").value;
+	document.getElementById("nazwa6").innerHTML = op;
+}
+
+function eee(){ 
+	var z = document.getElementById("but2");
+	z.style.display = "none"
+	
+	var name = document.getElementById("kontr").value;
+	document.getElementById("nazwa1").innerHTML = name;
+	var name = document.getElementById("numer").value;
+	document.getElementById("nazwa2").innerHTML = name;
+	var name = document.getElementById("kwota").value;
+	document.getElementById("nazwa3").innerHTML =+ name + " zł";
+	var date = document.getElementById("data1").value;
+	document.getElementById("nazwa4").innerHTML = date;
+	var date = document.getElementById("data2").value;
+	document.getElementById("nazwa5").innerHTML = date;
+	var name = document.getElementById("opis").value;
+	document.getElementById("nazwa6").innerHTML = name;
+	
+	var test = document.getElementById("test");
+	test.style.display = "none";
+	var x = document.getElementById("divOne");
+	x.style.display = "none";
+	var y = document.getElementById("divTwo");
+	y.style.display = "none";
+}
+</script>
+</head>
+<body>
+<div id="paper">
+<h1>Faktura</h1>
+<div id="divOne">
+<p>Kontrahent</p> <div class="inp"><input id="kontr" type="text" name="kontr"></div>
+<p>Numer kontrahenta</p> <div class="inp"><input id="numer" type="text" name="numer"></div>
+<p>Kwota netto</p> <div class="inp"><input id="kwota" type="number" name="kwota"></div>
+<p>Data wpływu</p> <div class="inp"><input id="data1" type="text" name="data1" placeholder="DD.MM.RRRR"></div>
+<p>Data wystawienia faktury</p> <div class="inp"><input id="data2" type="text" name="data2" placeholder="DD.MM.RRRR"></div>
+<p>Opis</p> <div class="inp"><input id="opis" type="text" name="opis"></div><br>
+<div class="inp"><button onClick="save()">Dodaj fakture</button></div>
+</div>
+<p id="test">Dane wystawionej faktury:</p>
+<div id="but">
+</div>
+<div id="pdf">
+<table id="table">
+	<tr>
+		<td>Kontrahent</td>
+		<td id="nazwa1"></td>
+	</tr>
+	<tr>
+		<td>Numer faktury</td>
+		<td id="nazwa2"></td>
+	</tr>
+	<tr>
+		<td>Kwota netto</td>
+		<td id="nazwa3"></td>
+	</tr>
+	<tr>
+		<td>Data wpływu</td>
+		<td id="nazwa4"></td>
+	</tr>
+	<tr>
+		<td>Data wystawienia faktury</td>
+		<td id="nazwa5"></td>
+	</tr>
+	<tr>
+		<td>Opis</td>
+		<td id="nazwa6"></td>
+	</tr>
+</table>
+<div id="but2"><button onClick="eee()" id="przycisk">Pokaż dane w pdf</button></div>
+</div>
+</div>
+</body>
+</html>
